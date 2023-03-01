@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css?family=Hanken+Grotesk:500,700,800');
+
+/* Colors */
+:root {
+  /* Primary */
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+
+  /* Gradients */
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+html,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typography */
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  height: 100vh; /* this is optional; it sets the height of the body element to the full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-lavender);
+}
+
+p {
+  font-size: 18px;
+  font-weight: 500;
+}
+.wrapper-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main-wrapper {
+  max-width: 375px;
+  box-shadow: 0 0.5rem 2rem 0 rgb(0 0 0 / 10%);
+}
+
+.main-wrapper .result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+  border-bottom-right-radius: 26px;
+  border-bottom-left-radius: 26px;
+  padding: 32px 42px;
+}
+
+.main-wrapper .result .small-title {
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.main-wrapper .result .result-score__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to bottom,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.main-wrapper .result .result-score__num {
+  font-size: 56px;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.main-wrapper .result .result-score__range {
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  margin-top: -12px;
+}
+
+.main-wrapper .result .h1-title {
+  color: var(--white);
+  font-size: 22px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.main-wrapper .result .result-paragraph {
+  text-align: center;
+  font-size: 14px;
+}
+
+.summary {
+  padding: 18px 22px;
+}
+
+.summary .h2-title {
+  color: var(--dark-gray-blue);
+  margin-bottom: 22px;
+}
+
+.summary .subject-label {
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.summary .subject-label:nth-child(1) {
+  background-color: #fff6f5ff;
+}
+.summary .subject-label:nth-child(2) {
+  background-color: #fffbf2ff;
+}
+.summary .subject-label:nth-child(3) {
+  background-color: #f2fbfaff;
+}
+.summary .subject-label:nth-child(4) {
+  background-color: #f3f3fdff;
+}
+
+.summary .subject-label:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.summary .favicon {
+  display: flex;
+}
+
+.summary .summary-subtitle {
+  color: var(--light-red);
+  margin-left: 12px;
+}
+
+.summary-score__range .score {
+  font-weight: bold;
+  color: var(--dark-gray-blue);
+}
+
+.summary-score__range .slash {
+  padding: 0 8px;
+}
+
+.summary .submit-btn {
+  margin-top: 24px;
+  width: 100%;
+  border: none;
+  color: white;
+  background-color: var(--dark-gray-blue);
+  font-weight: bold;
+  font-size: 22px;
+  padding: 16px 0;
+  border-radius: 50px;
+  /* transition: 2s; */
+  cursor: pointer;
+}
+
+.summary .submit-btn:hover {
+  background: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+  cursor: pointer;
+}
+
+footer {
+  padding: 24px 0;
+}
+
+@media (min-width: 1280px) {
+  .main-wrapper {
+    display: flex;
+    flex-direction: row;
+    max-width: 50%;
+  }
+
+  .main-wrapper .result {
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 48px 54px;
+  }
+
+  .main-wrapper .result {
+    border-radius: 26px;
+  }
+
+  .main-wrapper .result .small-title {
+    font-size: 22px;
+  }
+
+  .main-wrapper .result .result-score__section {
+    width: 180px;
+    height: 180px;
+  }
+
+  .main-wrapper .result .h1-title {
+    font-size: 24px;
+  }
+
+  .main-wrapper .result .result-paragraph {
+    font-size: 16px;
+  }
+
+  .main-wrapper .summary {
+    width: 50%;
+    padding: 32px;
+  }
+}

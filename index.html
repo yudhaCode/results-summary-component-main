@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main-wrapper">
+      <!-- result section -->
+      <section class="result">
+        <div class="wrapper-flex">
+          <span class="small-title">Your Result</span>
+          <div class="result-score__section">
+            <span class="result-score__num">76</span>
+            <p class="result-score__range">of 100</p>
+          </div>
+        </div>
+        <div class="text-wrapper">
+          <h1 class="h1-title">Great</h1>
+          <p class="result-paragraph">
+            You scored higher than 65% of the people who have taken these test.
+          </p>
+        </div>
+      </section>
+
+      <!-- summary section -->
+      <section class="summary">
+        <h2 class="h2-title">Summary</h2>
+        <ul class="subject-section"></ul>
+        <button class="submit-btn" onclick="location.reload()">Continue</button>
+      </section>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Faisal Yudha Nugraha</a>.
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
